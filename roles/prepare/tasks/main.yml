@@ -1,0 +1,28 @@
+# create a directory if it doesn't exist
+- file:
+    path: /etc/ocserv
+    state: directory
+    mode: 0755
+
+# touch the file
+- file:
+    path: /etc/ocserv/ocpasswd
+    state: touch
+
+- name: Configure ocserv
+  template:
+    src: ocserv.conf.j2
+    dest: /etc/ocserv/ocserv.conf
+    backup: yes
+
+- name : install pip 2 packages
+  yum:
+    pkg: "{{ item }}"
+    state: latest
+  with_items:
+    - python2-pip
+
+- name : install docker-py with pip
+  pip:
+    name: docker-py
+    executable: pip

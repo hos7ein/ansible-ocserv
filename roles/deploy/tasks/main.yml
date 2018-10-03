@@ -1,0 +1,20 @@
+---
+- name: deploy ocserv docker container
+  docker_container:
+        name: "{{ container_name }}"
+        image: "{{ docker_image_name }}"
+        published_ports:
+          - "{{ src_port }}:{{ dest_port }}"
+          - "{{ src_port }}:{{ dest_port }}/udp"
+        volumes:
+          - "{{ src_vol }}:{{ dest_vol }}"
+        privileged: "{{ privileged }}"
+        restart_policy: always
+        env:
+           CA_CN: "{{ CA_CN }}"
+           CA_ORG: "{{ CA_ORG }}"
+           CA_DAYS: "{{ CA_DAYS }}"
+           SRV_CN: "{{ node_ip }}"
+           SRV_ORG: "{{ SRV_ORG }}"
+           SRV_DAYS: "{{ SRV_DAYS }}"
+           NO_TEST_USER: "{{ NO_TEST_USER }}"

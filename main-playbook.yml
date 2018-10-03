@@ -1,0 +1,6 @@
+# apply common configuration to all nodes
+- hosts: ocserver
+  remote_user: root
+  roles:
+  - prepare
+  - deploy
