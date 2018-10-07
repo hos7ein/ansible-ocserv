@@ -9,19 +9,30 @@
     path: /etc/ocserv/ocpasswd
     state: touch
 
+# copy configuration file
 - name: Configure ocserv
   template:
     src: ocserv.conf.j2
     dest: /etc/ocserv/ocserv.conf
     backup: yes
 
-- name : install pip 2 packages
+#install packages
+- name : install packages
+  yum:
+    pkg: "{{ item }}"
+    state: latest
+  with_items:
+    - docker
+
+# install python2-pip package
+- name : install pip 2 package
   yum:
     pkg: "{{ item }}"
     state: latest
   with_items:
     - python2-pip
 
+#install docker-py package
 - name : install docker-py with pip
   pip:
     name: docker-py
