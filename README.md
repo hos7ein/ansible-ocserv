@@ -48,4 +48,4 @@ Hossein Aghaie [@hos7ein](http://twitter.com/hos7ein)
 
 ## License
 
-haproxystats-docker source code is available under the GPL-3.0 [License](/LICENSE).
+ansible-ocserv source code is available under the GPL-3.0 [License](/LICENSE).
