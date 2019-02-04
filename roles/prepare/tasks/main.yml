@@ -1,19 +1,19 @@
 # create a directory if it doesn't exist
 - file:
-    path: /etc/ocserv
+    path: "{{ src_vol }}"
     state: directory
     mode: 0755
 
 # touch the file
 - file:
-    path: /etc/ocserv/ocpasswd
+    path: "{{ src_vol }}/ocpasswd"
     state: touch
 
 # copy configuration file
 - name: Configure ocserv
   template:
     src: ocserv.conf.j2
-    dest: /etc/ocserv/ocserv.conf
+    dest: "{{ src_vol }}/ocserv.conf"
     backup: yes
 
 #install packages

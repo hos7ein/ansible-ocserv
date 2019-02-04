@@ -4,7 +4,7 @@
 
 container_name: ocserv
 docker_image_name: docker.io/tommylau/ocserv
-src_port: 5443
+src_port: 6443
 dest_port: 443
 src_vol: /etc/ocserv
 dest_vol: /etc/ocserv
@@ -15,3 +15,7 @@ CA_DAYS: 3650
 SRV_ORG: My Test
 SRV_DAYS: 9999
 NO_TEST_USER: 1
+##########################################################
+#User information
+username: hos7ein
+password: mypassword

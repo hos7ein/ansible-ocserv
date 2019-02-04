@@ -1,5 +1,17 @@
 ---
-- name: deploy ocserv docker container
+- name: Create hash from password for user
+  command: openssl passwd -1 "{{ password }}"
+  register: password_of_user
+
+
+- name: Configure ocpasswd file and create a user
+  lineinfile: dest="{{ src_vol }}/ocpasswd"
+              line='{{item}}'
+  with_items:
+    - "{{ username }}:Route,All:{{ password_of_user.stdout }}"
+
+
+- name: Deploy ocserv docker container
   docker_container:
         name: "{{ container_name }}"
         image: "{{ docker_image_name }}"
