@@ -4,7 +4,7 @@
     state: directory
     mode: 0755
 
-# touch the file
+# touch the ocpasswd file
 - file:
     path: "{{ src_vol }}/ocpasswd"
     state: touch
@@ -15,26 +15,3 @@
     src: ocserv.conf.j2
     dest: "{{ src_vol }}/ocserv.conf"
     backup: yes
-
-#install packages
-- name : install packages
-  yum:
-    pkg: "{{ item }}"
-    state: latest
-  with_items:
-    - epel-release
-    - docker
-
-# install python2-pip package
-- name : install pip 2 package
-  yum:
-    pkg: "{{ item }}"
-    state: latest
-  with_items:
-    - python2-pip
-
-#install docker-py package
-- name : install docker-py with pip
-  pip:
-    name: docker-py
-    executable: pip
