@@ -47,7 +47,11 @@ When Ansible Playbook run successfully completely, you can make OpenConnect clie
 
 ## Contact
 
-Hossein Aghaie [@hos7ein](http://twitter.com/hos7ein)
+**Project website**: https://github.com/hos7ein/ansible-ocserv
+
+**Author**: Hossein Aghaie <hossein.a97@gmail.com>
+
+**Twitter**: Hossein Aghaie [@hos7ein](http://twitter.com/hos7ein)
 
 
 ## License
