@@ -16,7 +16,7 @@ yum install ansible
 In your OpenConnect VPN Server/s, you have need few packages. In CentOS Linux distribution you should run below command :
 
 ```
-yum install docker python-docker-py openssl
+yum install epel-release docker python-docker-py openssl
 ```
 
 ### Deploy ###
