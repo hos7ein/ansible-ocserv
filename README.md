@@ -7,13 +7,17 @@ ansible-ocserv
 
 
 ### Dependency ###
-To use `ansible-ocserv` project you have need some packages for deploying it,  which one of them is ansible. If you using CentOS you should run below command in your Ansible machine :
+To use `ansible-ocserv` project you have need some packages for deploying it, In your Ansible machine you need this packages:
 
-```
-yum install ansible
-```
+* ansible
 
-In your OpenConnect VPN Server/s, you have need few packages. In CentOS Linux distribution you should run below command :
+In OpenConnect VPN Server, you will need some of the packages listed below.
+
+* docker
+* docker-py
+* openssl
+
+For example, in Linux CentOS distribution you should run below command:
 
 ```
 yum install epel-release docker python-docker-py openssl
