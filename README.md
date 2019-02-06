@@ -51,7 +51,7 @@ When Ansible Playbook run successfully completely, you can make OpenConnect clie
 
 **Author**: Hossein Aghaie <hossein.a97@gmail.com>
 
-**Twitter**: Hossein Aghaie [@hos7ein](http://twitter.com/hos7ein)
+**Twitter**: Hossein Aghaie [@hos7ein](https://twitter.com/hos7ein)
 
 
 ## License
