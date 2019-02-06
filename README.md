@@ -7,11 +7,11 @@ ansible-ocserv
 
 
 ### Dependency ###
-To use `ansible-ocserv` project you have need some packages for deploying it, In your Ansible machine you need this packages:
+To use `ansible-ocserv` project you have need some packages for deploying it, In your Ansible machine you need this package:
 
 * ansible
 
-In OpenConnect VPN Server, you will need some of the packages listed below.
+In OpenConnect VPN Server/s, you will need some of the packages listed below.
 
 * docker
 * docker-py
