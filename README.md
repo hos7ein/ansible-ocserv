@@ -7,7 +7,7 @@ ansible-ocserv
 
 
 ### Dependency ###
-To use `ansible-ocserv` project you have need some packages for deploying it, In your Ansible machine you need this package:
+To use `ansible-ocserv` project you need to have some packages for deploying it, in your Ansible machine you need this package:
 
 * ansible
 
